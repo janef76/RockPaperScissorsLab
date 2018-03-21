@@ -64,16 +64,15 @@
     <TextView
         android:id="@+id/GameResult"
         android:layout_width="247dp"
-        android:layout_height="133dp"
+        android:layout_height="135dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="104dp"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PaparButton" />
 
@@ -81,8 +80,8 @@
         android:id="@+id/computerScore"
         android:layout_width="151dp"
         android:layout_height="73dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="36dp"
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="24sp"
@@ -100,8 +99,47 @@
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/computerScore"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/GameResult" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/GameResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RockBottom"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageView
+        android:id="@+id/paperImage"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/GameResult"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/scissorImage"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/GameResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/paperImage"
+        app:layout_constraintTop_toBottomOf="@+id/ScissorButtom"
+        app:layout_constraintVertical_bias="0.037"
+        app:srcCompat="@drawable/scissors" />
 
 </android.support.constraint.ConstraintLayout>
