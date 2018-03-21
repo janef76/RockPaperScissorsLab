@@ -1,5 +1,6 @@
 package com.example.user.rockpaperscissorslab;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         paperButton = findViewById(R.id.PaparButton);
         scissorsButton = findViewById(R.id.ScissorButtom);
         rockButton = findViewById(R.id.RockBottom);
+
+//        Intent intent = getIntent();
     }
 
     public void onPaperButtonClick(View clickedView) {

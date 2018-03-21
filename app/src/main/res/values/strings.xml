@@ -4,4 +4,9 @@
     <string name="RockButton">Rock</string>
     <string name="PaperButton">Paper</string>
     <string name="ScissorButton">Scissors</string>
+    <string name="introHeader">Welcome to Rock, Paper, Scissors!</string>
+    <string name="introExplanation">In this game you will be playing against the phone!
+        You can pick either rock, paper or scissors and the phone will make a choice too.
+        Rock beats scissors, paper beats rock, and scissors beat paper.
+        May the best man or machine win!</string>
 </resources>
