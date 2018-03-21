@@ -24,9 +24,9 @@
 
     <Button
         android:id="@+id/RockBottom"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="76dp"
         android:background="@android:color/holo_green_dark"
         android:onClick="onRockButtonClick"
@@ -36,9 +36,9 @@
 
     <Button
         android:id="@+id/PaparButton"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
         android:background="@android:color/holo_green_dark"
         android:onClick="onPaperButtonClick"
@@ -48,15 +48,16 @@
 
     <Button
         android:id="@+id/ScissorButtom"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
-        android:background="@android:color/holo_green_dark"
+        android:background="@color/originalButtonColor"
         android:onClick="onScissorsButtonClick"
         android:text="@string/ScissorButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/PaparButton"
         app:layout_constraintTop_toBottomOf="@+id/Instructions" />
 
@@ -66,12 +67,41 @@
         android:layout_height="133dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="56dp"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PaparButton" />
+
+    <TextView
+        android:id="@+id/computerScore"
+        android:layout_width="151dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GameResult" />
+
+    <TextView
+        android:id="@+id/playerScore"
+        android:layout_width="161dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/computerScore"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GameResult" />
+
 </android.support.constraint.ConstraintLayout>

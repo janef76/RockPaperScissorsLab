@@ -34,28 +34,34 @@ public class RockPaperScissorsGame {
     }
 
 
-    public String compareChoices(Choice userChoice, Choice computerChoice) {
+    public String compareChoices(Choice userChoice, Choice computerChoice, Score score) {
         if (userChoice == computerChoice) {
             return "you drew!";
         } else if (userChoice == Choice.ROCK && computerChoice == Choice.PAPER) {
+            score.addOneToComputerScore();
             return "you lost!";
         } else if (userChoice == Choice.ROCK && computerChoice == Choice.SCISSORS) {
+            score.addOneToPlayerScore();
             return "you won!";
         } else if (userChoice == Choice.PAPER && computerChoice == Choice.ROCK) {
+            score.addOneToPlayerScore();
             return "you won!";
         } else if (userChoice == Choice.PAPER && computerChoice == Choice.SCISSORS) {
+            score.addOneToComputerScore();
             return "you lost!";
         } else if (userChoice == Choice.SCISSORS && computerChoice == Choice.PAPER) {
+            score.addOneToPlayerScore();
             return "you won this time...";
         } else {
+            score.addOneToComputerScore();
             return "you lost!";
         }
     }
 
-    public String playGame(Choice userChoice) {
+    public String playGame(Choice userChoice, Score score) {
         Choice computerChoice = getComputerAnswer();
 
-        String result = compareChoices(userChoice, computerChoice);
+        String result = compareChoices(userChoice, computerChoice, score);
 
         return "You chose " + userChoice + '\n' + "The computer chose " + computerChoice + "... " + result;
 

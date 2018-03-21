@@ -13,10 +13,12 @@ import static org.junit.Assert.assertNotNull;
 public class RockPaperScissorsGameTest {
 
     RockPaperScissorsGame game;
+    Score score;
 
     @Before
     public void before() {
         game = new RockPaperScissorsGame();
+        score = new Score();
     }
 
     @Test
@@ -31,15 +33,15 @@ public class RockPaperScissorsGameTest {
 
     @Test
     public void canCompareChoices() {
-        assertEquals("you won!", game.compareChoices(Choice.PAPER, Choice.ROCK));
-        assertEquals("you won!", game.compareChoices(Choice.ROCK, Choice.SCISSORS));
-        assertEquals("you won this time...", game.compareChoices(Choice.SCISSORS, Choice.PAPER));
-        assertEquals("you lost!", game.compareChoices(Choice.PAPER, Choice.SCISSORS));
-        assertEquals("you lost!", game.compareChoices(Choice.ROCK, Choice.PAPER));
-        assertEquals("you lost!", game.compareChoices(Choice.SCISSORS, Choice.ROCK));
-        assertEquals("you drew!", game.compareChoices(Choice.PAPER, Choice.PAPER));
-        assertEquals("you drew!", game.compareChoices(Choice.SCISSORS, Choice.SCISSORS));
-        assertEquals("you drew!", game.compareChoices(Choice.ROCK, Choice.ROCK));
+        assertEquals("you won!", game.compareChoices(Choice.PAPER, Choice.ROCK, score));
+        assertEquals("you won!", game.compareChoices(Choice.ROCK, Choice.SCISSORS, score));
+        assertEquals("you won this time...", game.compareChoices(Choice.SCISSORS, Choice.PAPER, score));
+        assertEquals("you lost!", game.compareChoices(Choice.PAPER, Choice.SCISSORS, score));
+        assertEquals("you lost!", game.compareChoices(Choice.ROCK, Choice.PAPER, score));
+        assertEquals("you lost!", game.compareChoices(Choice.SCISSORS, Choice.ROCK, score));
+        assertEquals("you drew!", game.compareChoices(Choice.PAPER, Choice.PAPER, score));
+        assertEquals("you drew!", game.compareChoices(Choice.SCISSORS, Choice.SCISSORS, score));
+        assertEquals("you drew!", game.compareChoices(Choice.ROCK, Choice.ROCK, score));
 
     }
 
