@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.example.user.rockpaperscissorslab.MainActivity">
+
+    <TextView
+        android:id="@+id/Instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="@string/Instructions"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/RockBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="76dp"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="onRockButtonClick"
+        android:text="@string/RockButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Instructions" />
+
+    <Button
+        android:id="@+id/PaparButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="76dp"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="onPaperButtonClick"
+        android:text="@string/PaperButton"
+        app:layout_constraintStart_toEndOf="@+id/RockBottom"
+        app:layout_constraintTop_toBottomOf="@+id/Instructions" />
+
+    <Button
+        android:id="@+id/ScissorButtom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="76dp"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="onScissorsButtonClick"
+        android:text="@string/ScissorButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PaparButton"
+        app:layout_constraintTop_toBottomOf="@+id/Instructions" />
+
+    <TextView
+        android:id="@+id/GameResult"
+        android:layout_width="247dp"
+        android:layout_height="133dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="132dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PaparButton" />
+</android.support.constraint.ConstraintLayout>
